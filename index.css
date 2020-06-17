@@ -1,0 +1,100 @@
+html {
+    background-color: white;
+}
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+#game {
+    margin: 0;
+    width: 825px;
+    height: 600px;
+    background: rgb(87,237,246);
+    background: radial-gradient(90deg, rgba(87,237,246,1) 0%, rgba(69,214,203,1) 48%, rgba(0,212,255,1) 100%);
+    overflow: hidden;
+    font-family: "Comic Sans MS", sans-serif;
+    position: relative;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: yellow;
+    text-align: center;
+    user-select: none;
+}
+
+.menu > h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.menu > .instructions {
+    margin-bottom: 20px;
+}
+
+.menu > a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu > button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 16pt;
+    padding: 10px 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.score, .hi-score {
+    user-select: none;
+    position: absolute;
+    pointer-events: none;
+    font-size: 18pt;
+}
+
+.score {
+    right: 20px;
+    top: 50px;
+}
+
+.hi-score {
+    top: 20px;
+    right: 20px;
+}
+
+.score::before {
+    content: "Score: ";
+}
+
+.hi-score::before {
+    content: "High Score: ";
+}
+
+.duck {
+    position: absolute;
+    width: 40px;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.enemy {
+    position: absolute;
+    pointer-events: none;
+    width: 20px;
+}
