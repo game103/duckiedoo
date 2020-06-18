@@ -79,7 +79,6 @@ function createMenu() {
     var button = document.createElement("button");
     button.innerText = "Play";
     button.onclick = function(e) {
-        console.log(e);
         buttonX = e.pageX / scale;
         buttonY = e.pageY / scale;
         loadGame();
@@ -293,7 +292,10 @@ function createPlayer() {
             centerDuck();
         }
         else {
-            if( newWidth <= originalBoundingRect.width/scale) duck.style.width = originalBoundingRect.width/scale + "px";
+            if( newWidth <= originalBoundingRect.width/scale) {
+                duck.style.width = originalBoundingRect.width/scale + "px";
+		growMultiplier = INIT_GROW_MULTIPLIER;
+	    }
             else duck.style.width = MAX_WIDTH + "px";
             centerDuck();
             growFunction = null;
