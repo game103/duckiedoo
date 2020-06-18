@@ -89,6 +89,7 @@ function createMenu() {
     var credits = document.createElement("a");
     credits.innerHTML = "&copy; 2020 Game 103 (game103.net)";
     credits.setAttribute("href", "https://game103.net");
+    credits.setAttribute("target", "_blank");
     menu.appendChild(credits);
 
     document.getElementById("game").appendChild(menu);
